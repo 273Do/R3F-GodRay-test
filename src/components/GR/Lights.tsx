@@ -7,7 +7,7 @@ export const Lights = () => {
   return (
     <>
       <ambientLight intensity={0.05} />
-      <PointLight position={[0, 1, -2]} />
+      <PointLight position={[0, 1, -3]} />
     </>
   );
 };
@@ -39,7 +39,7 @@ const PointLight = ({ position }: PointLightProps) => {
 
   return (
     <mesh ref={meshRef} position={position}>
-      <circleGeometry args={[1, 128]} />
+      <circleGeometry args={[1.5, 64]} />
       <meshBasicMaterial color={"#460000"} side={THREE.DoubleSide} />
       <pointLight
         // ref={lightRef}

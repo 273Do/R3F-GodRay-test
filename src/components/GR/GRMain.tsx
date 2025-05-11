@@ -1,9 +1,11 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, SoftShadows } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Lights } from "./Lights";
 import { Model } from "./Model";
 import { Effects } from "./Effects";
+import HTMLContents from "./HTMLContents";
+import Text2D from "./Text2D";
 
 const GRMain = ({ className }: { className?: string }) => {
   return (
@@ -19,12 +21,15 @@ const GRMain = ({ className }: { className?: string }) => {
       shadows
     >
       <color attach="background" args={["#000"]} />
-      <OrbitControls />
+      <OrbitControls enableZoom={false} />
       <Lights />
+      {/* <HTMLContents /> */}
+      <Text2D />
       <Suspense fallback={null}>
         <Model position={[0, 0, 0]} />
       </Suspense>
       <Effects />
+      <SoftShadows samples={3} />
     </Canvas>
   );
 };

@@ -50,7 +50,7 @@ export const Model = ({ position }: { position: [number, number, number] }) => {
             />
           </mesh>
         ))}
-      {/* <mesh geometry={nodes.mesh.geometry} scale={0.4}>
+      {/* <mesh geometry={nodes.mesh.geometry} scale={0.8}>
         <meshStandardMaterial
           color={"#ffaa00"}
           roughness={0}
