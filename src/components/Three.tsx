@@ -15,7 +15,7 @@ import {
   Vignette,
 } from "@react-three/postprocessing";
 
-export default function mainThree({ className }: { className?: string }) {
+export default function Three({ className }: { className?: string }) {
   return (
     <>
       <Canvas
