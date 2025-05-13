@@ -1,4 +1,10 @@
-import { Billboard, Text } from "@react-three/drei";
+import {
+  Billboard,
+  Html,
+  Scroll,
+  ScrollControls,
+  Text,
+} from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import React from "react";
 
@@ -8,22 +14,29 @@ const Text2D = () => {
   return (
     <mesh>
       <Billboard>
-        <Text
-          textAlign="center"
-          anchorX="center"
-          anchorY="middle"
-          position={[leftEdge + 0.3, 1, -1]}
-        >
-          Hello
-        </Text>
-        <Text
-          textAlign="center"
-          anchorX="center"
-          anchorY="middle"
-          position={[-leftEdge - 0.3, -1, -1]}
-        >
-          World
-        </Text>
+        <ScrollControls pages={2} damping={0.2} enabled>
+          <Scroll>
+            <Text
+              textAlign="center"
+              anchorX="center"
+              anchorY="middle"
+              position={[leftEdge + 0.3, 1, -1]}
+            >
+              Hello
+            </Text>
+            <Text
+              textAlign="center"
+              anchorX="center"
+              anchorY="middle"
+              position={[-leftEdge - 0.3, -1, -1]}
+            >
+              World
+            </Text>
+          </Scroll>
+          {/* <Scroll html> */}
+
+          {/* </Scroll> */}
+        </ScrollControls>
       </Billboard>
     </mesh>
   );

@@ -1,4 +1,9 @@
-import { OrbitControls, SoftShadows } from "@react-three/drei";
+import {
+  Scroll,
+  ScrollControls,
+  OrbitControls,
+  SoftShadows,
+} from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Lights } from "./Lights";
