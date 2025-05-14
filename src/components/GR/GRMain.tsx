@@ -4,15 +4,30 @@ import {
   OrbitControls,
   SoftShadows,
 } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import React, { Suspense } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import React, { Suspense, use } from "react";
 import { Lights } from "./Lights";
 import { Model } from "./Model";
 import { Effects } from "./Effects";
 import HTMLContents from "./HTMLContents";
 import Text2D from "./Text2D";
+import { useLocation } from "react-router-dom";
+
+const cameraPositions = {
+  "/": [0, -1.5, 3],
+  "/scene1": [5, 2, 5],
+  "/scene2": [-5, 1, 3],
+};
 
 const GRMain = ({ className }: { className?: string }) => {
+  const { pathname } = useLocation();
+
+  // useFrame(() => {
+  //   const [x, y, z] = cameraPos.get();
+  //   camera.position.lerp(new Vector3(x, y, z), 0.05);
+  //   camera.lookAt(0, 0, 0);
+  // });
+
   return (
     <Canvas
       camera={{
@@ -29,7 +44,7 @@ const GRMain = ({ className }: { className?: string }) => {
       <OrbitControls enableZoom={false} />
       <Lights />
       {/* <HTMLContents /> */}
-      <Text2D />
+      <Text2D pathname={pathname} />
       <Suspense fallback={null}>
         <Model position={[0, 0, 0]} />
       </Suspense>
