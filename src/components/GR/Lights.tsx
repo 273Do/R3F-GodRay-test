@@ -40,15 +40,15 @@ const PointLight = ({ position }: PointLightProps) => {
   return (
     <mesh ref={meshRef} position={position}>
       <circleGeometry args={[1.5, 64]} />
-      <meshBasicMaterial color={"#460000"} side={THREE.DoubleSide} />
-      <pointLight
+      <meshBasicMaterial color={"#4e4e4e"} side={THREE.DoubleSide} />
+      {/* <pointLight
         // ref={lightRef}
         color={"#ffffff"}
         intensity={10}
         shadow-mapSize-width={512}
         shadow-mapSize-height={512}
         castShadow
-      />
+      /> */}
     </mesh>
   );
 };
