@@ -5,7 +5,7 @@ import Three from "./components/Three";
 
 function App() {
   return (
-    <>
+    <div style={{ backgroundColor: "black", height: "100vh" }}>
       <BrowserRouter>
         <div className="header">
           <span>
@@ -37,7 +37,7 @@ function App() {
         {/* <Three className="scene" /> */}
         <GRMain className="scene" />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

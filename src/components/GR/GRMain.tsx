@@ -16,10 +16,11 @@ import { Vector3 } from "three";
 
 // 各ルートに対応するカメラ位置を定義
 const cameraPositions = {
-  "/": [0, -1.5, 3],
-  "/scene1": [1.2, 0.5, 2.8],
-  "/scene2": [-0.7, -2.2, 3],
-  "/scene3": [2.7, 0.2, 1.2],
+  "/": [-0.7, -2, 4.7],
+  "/scene1": [0.44, -2.22, 1.46],
+  "/scene2": [-0.8, -2.1, 0],
+  "/scene3": [2.11, -0.3, 1.27],
+  "/scene4": [0.47, 2.77, 2.01],
 };
 
 // イージング関数
@@ -67,6 +68,7 @@ const Scene = () => {
   // カメラアニメーションの更新
   useFrame(() => {
     console.log("カメラの位置", camera.position);
+    console.log("カメラの回転", camera.rotation);
     if (!isAnimating) return;
 
     const { startTime, duration, sourceCamera, targetCamera } =
@@ -94,10 +96,10 @@ const Scene = () => {
 
   return (
     <>
-      <color attach="background" args={["#000000"]} />
+      <color attach="background" args={["#040404"]} />
       <OrbitControls
-        enableZoom={false}
-        enablePan={false}
+        // enableZoom={false}
+        // enablePan={false}
         // アニメーション中はコントロールを無効化
         enabled={!isAnimating}
       />
@@ -105,10 +107,10 @@ const Scene = () => {
       {/* <HTMLContents /> */}
       <Text2D pathname={pathname} />
       <Suspense fallback={null}>
-        <Model position={[0, 0, 0]} />
+        <Model position={[0.5, 0, 1]} />
       </Suspense>
       <Effects />
-      {/* <SoftShadows samples={3} /> */}
+      <SoftShadows samples={3} />
     </>
   );
 };
