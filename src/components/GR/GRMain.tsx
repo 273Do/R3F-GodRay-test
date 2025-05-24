@@ -1,18 +1,11 @@
-import {
-  Scroll,
-  ScrollControls,
-  OrbitControls,
-  SoftShadows,
-} from "@react-three/drei";
+import { OrbitControls, SoftShadows } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Lights } from "./Lights";
 import { Model } from "./Model";
 import { Effects } from "./Effects";
-import HTMLContents from "./HTMLContents";
 import Text2D from "./Text2D";
 import { useLocation } from "react-router-dom";
-import { Vector3 } from "three";
 import { RainLines, RainParticles } from "./Rain";
 
 // 各ルートに対応するカメラ位置を定義

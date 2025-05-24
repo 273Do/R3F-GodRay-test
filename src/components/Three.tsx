@@ -1,12 +1,7 @@
 import * as THREE from "three";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  MeshDistortMaterial,
-  OrbitControls,
-  SpotLight,
-  useGLTF,
-} from "@react-three/drei";
+import { MeshDistortMaterial, OrbitControls, useGLTF } from "@react-three/drei";
 import {
   Bloom,
   DepthOfField,

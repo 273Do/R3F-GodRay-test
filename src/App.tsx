@@ -1,7 +1,6 @@
-import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import GRMain from "./components/GR/GRMain";
-import Three from "./components/Three";
 
 function App() {
   return (

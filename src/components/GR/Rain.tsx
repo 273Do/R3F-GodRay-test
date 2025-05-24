@@ -1,7 +1,5 @@
-import React, { useRef, useMemo, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
+import { useRef, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
 
 // 雨のパーティクルコンポーネント
 export function RainParticles({ count = 1000 }) {

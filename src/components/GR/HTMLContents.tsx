@@ -1,6 +1,5 @@
-import { Billboard, Html } from "@react-three/drei";
+import { Html } from "@react-three/drei";
 import React from "react";
-import { MeshStandardMaterial } from "three";
 
 const HTMLContents = () => {
   return (
