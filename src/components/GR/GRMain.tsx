@@ -99,8 +99,8 @@ const Scene = () => {
     <>
       <color attach="background" args={["#040404"]} />
       <OrbitControls
-        // enableZoom={false}
-        // enablePan={false}
+        enableZoom={false}
+        enablePan={false}
         // アニメーション中はコントロールを無効化
         enabled={!isAnimating}
       />
