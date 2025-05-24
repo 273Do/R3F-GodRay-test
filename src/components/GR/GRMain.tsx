@@ -13,6 +13,7 @@ import HTMLContents from "./HTMLContents";
 import Text2D from "./Text2D";
 import { useLocation } from "react-router-dom";
 import { Vector3 } from "three";
+import { RainLines, RainParticles } from "./Rain";
 
 // 各ルートに対応するカメラ位置を定義
 const cameraPositions = {
@@ -108,6 +109,8 @@ const Scene = () => {
       <Text2D pathname={pathname} />
       <Suspense fallback={null}>
         <Model position={[0.5, 0, 1]} />
+        <RainParticles count={1500} />
+        <RainLines count={300} />
       </Suspense>
       <Effects />
       <SoftShadows samples={3} />

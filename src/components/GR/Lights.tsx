@@ -40,7 +40,7 @@ const PointLight = ({ position }: PointLightProps) => {
   return (
     <mesh ref={meshRef} position={position}>
       <circleGeometry args={[1.5, 64]} />
-      <meshBasicMaterial color={"#423c38"} side={THREE.DoubleSide} />
+      <meshBasicMaterial color={"#323232"} side={THREE.DoubleSide} />
       {/* <pointLight
         // ref={lightRef}
         color={"#ffffff"}
